@@ -50,38 +50,36 @@ button.onclick = function (event) {
 // onKeyUp // triggers when key is released
 //dont use onKeyDown, only keypress
 
-
 const myFirstNameInput = document.querySelector("#firstName");
 console.log("myFirstNameInput", myFirstNameInput);
 
 const handleKeyPress = function () {
-    console.log("a key is pressed");
-    console.log(this.value);
-    console.log(event.target.value);
-}
+  console.log("a key is pressed");
+  console.log(this.value);
+  console.log(event.target.value);
+};
 
 myFirstNameInput.addEventListener("keydown", handleKeyPress);
 
-
-document.addEventListener('keypress', function(event) {
-    // Check if the pressed key is Enter
-    if (event.key === 'Enter') {
-        // Your code to be executed when Enter is pressed
-        console.log("Enter key is pressed");
-    }
+document.addEventListener("keypress", function (event) {
+  // Check if the pressed key is Enter
+  if (event.key === "Enter") {
+    // Your code to be executed when Enter is pressed
+    console.log("Enter key is pressed");
+  }
 });
 
 const theHoverBtn = document.querySelector(".pet-btn");
 
 const handleMouseOver = function (event) {
-    console.log("event.target.dataset.animal: ",event.target.animal);
-    event.target.style.background = "blue"
-    // changes the backgroundcolor of "hover over me btn"
-}
+  console.log("event.target.dataset.animal: ", event.target.animal);
+  event.target.style.background = "blue";
+  // changes the backgroundcolor of "hover over me btn"
+};
 
 const handleMouseOut = function (event) {
-    event.target.style.background = ""; // Resets the background color
-}
+  event.target.style.background = ""; // Resets the background color
+};
 
 theHoverBtn.addEventListener("mouseover", handleMouseOver);
 theHoverBtn.addEventListener("mouseout", handleMouseOut);
